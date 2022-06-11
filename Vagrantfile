@@ -69,7 +69,7 @@ Vagrant.configure("2") do |config|
             mkdir -p ~root/.ssh
             cp ~vagrant/.ssh/auth* ~root/.ssh
             yum install -y mdadm smartmontools hdparm gdisk lvm2 xfsdump wget
-            yum install -y mdadm smartmontools hdparm gdisk lvm2 xfsdump wget
+            vgrename VolGroup00 VolRoot
             mkdir /usr/lib/dracut/modules.d/01test
             wget https://raw.githubusercontent.com/Vozmen/OTUS7_SYSLOAD/main/module-setup.sh -O /usr/lib/dracut/modules.d/01test/module-setup.sh
             wget https://raw.githubusercontent.com/Vozmen/OTUS7_SYSLOAD/main/test.sh -O /usr/lib/dracut/modules.d/01test/test.sh
